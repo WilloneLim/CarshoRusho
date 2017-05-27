@@ -5,4 +5,4 @@ install:
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 script:
   - msbuild MyGame.sln
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./CarshoRusho/bin/Debug/MyGame.exe
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./bin/Debug/MyGame.exe
