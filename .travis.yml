@@ -4,5 +4,5 @@ install:
   - nuget restore MyGame.sln
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 script:
-  - msbuild /p:Configuration=Debug /p:Platform=x86 MyGame.sln
+  - MSBUILD.exe /p:Configuration=Debug /p:Platform=x86 MyGame.sln
   - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./MyProject.Tests/bin/Release/MyProject.Tests.dll
