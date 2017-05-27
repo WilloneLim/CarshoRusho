@@ -1,7 +1,0 @@
-language: csharp
-solution: solution-name.sln
-install:
-  - nuget restore MyGame.sln
-  - nuget install xunit.runners -Version 1.9.2 -OutputDirectory testrunner
-script:
-  - mono ./packages/xunit.runners.*/tools/xunit.console.clr4.exe ./Team02CR.Tests/bin/Release/Team02CR.Tests.dll
