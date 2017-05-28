@@ -3,6 +3,9 @@ solution: MyGame.sln
 install:
   - nuget restore MyGame.sln
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+  - sudo apt-get install mono-dmcs
+  - sudo apt-get install mono-gmcs
+  - sudo apt-get install mono-devel
 script:
   - msbuild MyGame.sln
   - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./bin/Debug/MyGame.exe
